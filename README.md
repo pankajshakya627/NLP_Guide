@@ -50,11 +50,35 @@ Explore complex, specialized NLP tasks that power modern applications.
 *   **6.5** Dialogue Systems & Chatbots
 
 ### [Part 7: Generative AI and LLMs](Part%207%20-%20Generative%20AI%20and%20LLMs/README.md)
+
 The cutting edge of NLP. Learn about Large Language Models, how they work, and how to engineer prompts for them.
+
 *   **7.1** Introduction to Generative AI
+
 *   **7.2** Large Language Models (LLMs)
+
 *   **7.3** Prompt Engineering
+
 *   **7.4** Applications of LLMs
 
+
+
+### [Part 8: NLP Interview Guide](Part%208%20-%20NLP%20Interview%20Guide/README.md)
+
+Prepare for your NLP interview with this comprehensive collection of questions and answers, covering everything from basic linguistics to advanced system design.
+
+*   **8.1** General NLP & Linguistics
+
+*   **8.2** Classical ML & Text Processing
+
+*   **8.3** Deep Learning & Embeddings
+
+*   **8.4** Transformers & LLMs
+
+*   **8.5** System Design & Coding Scenarios
+
+
+
 ---
+
 *Created with ❤️ for NLP Enthusiasts.*

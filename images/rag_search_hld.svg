@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="0" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333" />
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="30" font-family="Arial" font-size="20" font-weight="bold" text-anchor="middle">RAG Search Engine Architecture</text>
+
+  <!-- Section 1: Ingestion Pipeline (Top) -->
+  <rect x="50" y="60" width="800" height="150" fill="#f3e5f5" rx="15" ry="15"/>
+  <text x="70" y="85" font-family="Arial" font-size="14" font-weight="bold" fill="#4a148c">Ingestion Pipeline</text>
+
+  <!-- Documents -->
+  <rect x="100" y="100" width="60" height="80" fill="#fff" stroke="#333" stroke-width="1"/>
+  <text x="130" y="145" font-family="Arial" font-size="12" text-anchor="middle">Docs</text>
+
+  <!-- Chunking -->
+  <rect x="250" y="110" width="100" height="60" fill="#ce93d8" stroke="#4a148c" stroke-width="2"/>
+  <text x="300" y="145" font-family="Arial" font-size="12" text-anchor="middle">Chunking</text>
+  <line x1="160" y1="140" x2="250" y2="140" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Encoder Model -->
+  <rect x="450" y="110" width="100" height="60" fill="#b39ddb" stroke="#4a148c" stroke-width="2"/>
+  <text x="500" y="135" font-family="Arial" font-size="12" text-anchor="middle">Encoder</text>
+  <text x="500" y="155" font-family="Arial" font-size="10" text-anchor="middle">(BERT/S-BERT)</text>
+  <line x1="350" y1="140" x2="450" y2="140" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Vector DB -->
+  <path d="M 700 100 Q 750 100 750 120 V 160 Q 750 180 700 180 Q 650 180 650 160 V 120 Q 650 100 700 100" fill="#fff59d" stroke="#fbc02d" stroke-width="2"/>
+  <path d="M 650 120 Q 700 140 750 120" fill="none" stroke="#fbc02d" stroke-width="2"/>
+  <text x="700" y="145" font-family="Arial" font-size="12" text-anchor="middle">Vector DB</text>
+  <text x="700" y="160" font-family="Arial" font-size="10" text-anchor="middle">(Pinecone/FAISS)</text>
+  <line x1="550" y1="140" x2="650" y2="140" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+
+
+  <!-- Section 2: Search Pipeline (Bottom) -->
+  <rect x="50" y="250" width="800" height="200" fill="#e0f2f1" rx="15" ry="15"/>
+  <text x="70" y="275" font-family="Arial" font-size="14" font-weight="bold" fill="#004d40">Search Pipeline</text>
+
+  <!-- User Query -->
+  <circle cx="100" cy="350" r="30" fill="#80cbc4" stroke="#004d40" stroke-width="2"/>
+  <text x="100" y="355" font-family="Arial" font-size="12" text-anchor="middle">Query</text>
+
+  <!-- Query Encoder -->
+  <rect x="250" y="320" width="100" height="60" fill="#b39ddb" stroke="#4a148c" stroke-width="2"/>
+  <text x="300" y="345" font-family="Arial" font-size="12" text-anchor="middle">Query</text>
+  <text x="300" y="365" font-family="Arial" font-size="12" text-anchor="middle">Encoder</text>
+  <line x1="130" y1="350" x2="250" y2="350" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Retrieval -->
+  <rect x="450" y="320" width="100" height="60" fill="#fff9c4" stroke="#fbc02d" stroke-width="2"/>
+  <text x="500" y="345" font-family="Arial" font-size="12" text-anchor="middle">ANN Search</text>
+  <text x="500" y="365" font-family="Arial" font-size="10" text-anchor="middle">(Top-K)</text>
+  <line x1="350" y1="350" x2="450" y2="350" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Interaction with DB -->
+  <line x1="500" y1="320" x2="500" y2="280" stroke="#333" stroke-width="2" stroke-dasharray="4"/>
+  <line x1="500" y1="280" x2="700" y2="280" stroke="#333" stroke-width="2" stroke-dasharray="4"/>
+  <line x1="700" y1="280" x2="700" y2="180" stroke="#333" stroke-width="2" stroke-dasharray="4" marker-end="url(#arrow)"/>
+  <text x="600" y="275" font-family="Arial" font-size="10" text-anchor="middle">Fetch Context</text>
+
+  <!-- LLM Generation -->
+  <rect x="650" y="320" width="120" height="80" fill="#bbdefb" stroke="#1565c0" stroke-width="2"/>
+  <text x="710" y="350" font-family="Arial" font-size="12" text-anchor="middle">LLM</text>
+  <text x="710" y="370" font-family="Arial" font-size="10" text-anchor="middle">(GPT-4 / Llama)</text>
+  
+  <line x1="550" y1="350" x2="650" y2="350" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="600" y="340" font-family="Arial" font-size="10" text-anchor="middle">Prompt + Context</text>
+
+  <!-- Final Answer -->
+  <text x="820" y="350" font-family="Arial" font-size="12" font-weight="bold" fill="#1565c0">Answer</text>
+  <line x1="770" y1="350" x2="810" y2="350" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+
+</svg>

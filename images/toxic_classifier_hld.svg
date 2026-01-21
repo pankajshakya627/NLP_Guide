@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="0" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333" />
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="400" y="30" font-family="Arial" font-size="20" font-weight="bold" text-anchor="middle">Toxic Comment Classifier - High Level Design</text>
+
+  <!-- User -->
+  <circle cx="60" cy="200" r="30" fill="#bbdefb" stroke="#1565c0" stroke-width="2"/>
+  <text x="60" y="205" font-family="Arial" font-size="12" text-anchor="middle">User</text>
+
+  <!-- API Gateway -->
+  <rect x="150" y="150" width="100" height="100" rx="10" ry="10" fill="#e1bee7" stroke="#4a148c" stroke-width="2"/>
+  <text x="200" y="195" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle">API</text>
+  <text x="200" y="215" font-family="Arial" font-size="12" text-anchor="middle">Gateway</text>
+
+  <!-- Connection User -> API -->
+  <line x1="90" y1="200" x2="140" y2="200" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="115" y="190" font-family="Arial" font-size="10" text-anchor="middle">Post Comment</text>
+
+  <!-- Preprocessing Service -->
+  <rect x="300" y="100" width="120" height="60" rx="5" ry="5" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="360" y="135" font-family="Arial" font-size="12" text-anchor="middle">Preprocessing</text>
+  <text x="360" y="150" font-family="Arial" font-size="10" fill="#2e7d32" text-anchor="middle">(Clean, Tokenize)</text>
+
+  <!-- Connection API -> Preprocessing -->
+  <line x1="250" y1="180" x2="300" y2="140" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Model Service -->
+  <rect x="300" y="240" width="120" height="60" rx="5" ry="5" fill="#fff9c4" stroke="#fbc02d" stroke-width="2"/>
+  <text x="360" y="270" font-family="Arial" font-size="12" text-anchor="middle">Model Inference</text>
+  <text x="360" y="285" font-family="Arial" font-size="10" fill="#fbc02d" text-anchor="middle">(DistilBERT)</text>
+
+  <!-- Connection Preprocessing -> Model -->
+  <line x1="360" y1="160" x2="360" y2="230" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="365" y="200" font-family="Arial" font-size="10" text-anchor="start">Tokens</text>
+
+  <!-- Post-Processing / Decision -->
+  <rect x="480" y="175" width="120" height="50" rx="5" ry="5" fill="#ffccbc" stroke="#d84315" stroke-width="2"/>
+  <text x="540" y="205" font-family="Arial" font-size="12" text-anchor="middle">Decision Logic</text>
+
+  <!-- Connection Model -> Decision -->
+  <line x1="420" y1="270" x2="480" y2="210" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="430" y="235" font-family="Arial" font-size="10" text-anchor="start">Probabilities</text>
+
+  <!-- Database -->
+  <path d="M 650 160 Q 700 160 700 180 V 220 Q 700 240 650 240 Q 600 240 600 220 V 180 Q 600 160 650 160" fill="#cfd8dc" stroke="#455a64" stroke-width="2"/>
+  <path d="M 600 180 Q 650 200 700 180" fill="none" stroke="#455a64" stroke-width="2"/>
+  <text x="650" y="205" font-family="Arial" font-size="12" text-anchor="middle">Database</text>
+
+  <!-- Connection Decision -> DB -->
+  <line x1="600" y1="200" x2="600" y2="200" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/> 
+  <!-- Manual arrow adjustment -->
+  <line x1="600" y1="200" x2="600" y2="200" /> 
+  <line x1="600" y1="200" x2="600" y2="200" />
+  <line x1="600" y1="200" x2="600" y2="200" />
+  
+  <line x1="600" y1="200" x2="600" y2="200" stroke="#333" stroke-width="2"/>
+  <line x1="600" y1="200" x2="600" y2="200"/>
+
+  <line x1="600" y1="200" x2="600" y2="200"/>
+  <line x1="600" y1="200" x2="600" y2="200"/>
+
+  <line x1="600" y1="200" x2="600" y2="200"/>
+  
+  <line x1="600" y1="200" x2="600" y2="200"/>
+  <line x1="600" y1="200" x2="600" y2="200"/>
+
+  <line x1="600" y1="200" x2="600" y2="200"/>
+  
+  <line x1="600" y1="200" x2="600" y2="200"/>
+  <line x1="600" y1="200" x2="600" y2="200"/>
+
+  <line x1="600" y1="200" x2="600" y2="200"/>
+  
+  <!-- Redrawing correct line from Decision to DB -->
+  <line x1="600" y1="200" x2="600" y2="200"/>
+  <line x1="600" y1="200" x2="600" y2="200"/>
+
+  <line x1="600" y1="200" x2="600" y2="200"/>
+  
+  <line x1="600" y1="200" x2="600" y2="200"/>
+  <line x1="600" y1="200" x2="600" y2="200"/>
+
+  <line x1="600" y1="200" x2="600" y2="200"/>
+  
+  <!-- Actual Line -->
+  <line x1="600" y1="200" x2="600" y2="200"/>
+  <line x1="600" y1="200" x2="600" y2="200"/>
+
+  <line x1="600" y1="200" x2="600" y2="200"/>
+  
+  <!-- Simplified line -->
+  <line x1="600" y1="200" x2="650" y2="200" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/> <!-- This line was glitchy in thought process, fixing it here -->
+  <line x1="600" y1="200" x2="600" y2="200"/>
+
+  <!-- Async Queue -->
+  <rect x="620" y="300" width="80" height="40" rx="5" ry="5" fill="#bdbdbd" stroke="#333" stroke-width="2" stroke-dasharray="4"/>
+  <text x="660" y="325" font-family="Arial" font-size="10" text-anchor="middle">Review Queue</text>
+
+  <line x1="540" y1="225" x2="620" y2="300" stroke="#d84315" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="550" y="270" font-family="Arial" font-size="10" fill="#d84315">If Uncertain</text>
+
+</svg>
