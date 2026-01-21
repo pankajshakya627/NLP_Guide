@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 500">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="0" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333" />
+    </marker>
+  </defs>
+
+  <!-- Encoder Block -->
+  <rect x="50" y="100" width="200" height="300" rx="10" ry="10" fill="#e8eaf6" stroke="#1a237e" stroke-width="2"/>
+  <text x="150" y="80" font-family="Arial" font-size="18" font-weight="bold" fill="#1a237e" text-anchor="middle">Encoder</text>
+
+  <!-- Encoder Layers -->
+  <rect x="75" y="280" width="150" height="60" rx="5" ry="5" fill="#c5cae9" stroke="#3949ab" stroke-width="1"/>
+  <text x="150" y="315" font-family="Arial" font-size="14" text-anchor="middle">Self-Attention</text>
+
+  <rect x="75" y="150" width="150" height="60" rx="5" ry="5" fill="#c5cae9" stroke="#3949ab" stroke-width="1"/>
+  <text x="150" y="185" font-family="Arial" font-size="14" text-anchor="middle">Feed Forward</text>
+
+  <!-- Encoder Connections -->
+  <line x1="150" y1="420" x2="150" y2="340" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="150" y="440" font-family="Arial" font-size="12" text-anchor="middle">Inputs (Embeddings)</text>
+  <line x1="150" y1="280" x2="150" y2="210" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+
+
+  <!-- Decoder Block -->
+  <rect x="350" y="100" width="200" height="300" rx="10" ry="10" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
+  <text x="450" y="80" font-family="Arial" font-size="18" font-weight="bold" fill="#e65100" text-anchor="middle">Decoder</text>
+
+  <!-- Decoder Layers -->
+  <rect x="375" y="280" width="150" height="60" rx="5" ry="5" fill="#ffe0b2" stroke="#fb8c00" stroke-width="1"/>
+  <text x="450" y="315" font-family="Arial" font-size="14" text-anchor="middle">Masked Attention</text>
+
+  <rect x="375" y="150" width="150" height="60" rx="5" ry="5" fill="#ffe0b2" stroke="#fb8c00" stroke-width="1"/>
+  <text x="450" y="185" font-family="Arial" font-size="14" text-anchor="middle">Feed Forward</text>
+
+  <!-- Cross Attention -->
+  <rect x="375" y="220" width="150" height="40" rx="5" ry="5" fill="#ffcc80" stroke="#f57c00" stroke-width="1"/>
+  <text x="450" y="245" font-family="Arial" font-size="12" text-anchor="middle">Cross-Attention</text>
+
+  <!-- Decoder Connections -->
+  <line x1="450" y1="420" x2="450" y2="340" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="450" y="440" font-family="Arial" font-size="12" text-anchor="middle">Outputs (Shifted)</text>
+  <line x1="450" y1="280" x2="450" y2="260" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="450" y1="220" x2="450" y2="210" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Encoder-Decoder Connection -->
+  <path d="M 250 180 L 300 180 L 300 240 L 375 240" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- Output Probabilities -->
+  <line x1="450" y1="150" x2="450" y2="50" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="450" y="40" font-family="Arial" font-size="12" text-anchor="middle">Output Probabilities</text>
+
+</svg>

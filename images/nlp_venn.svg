@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">
+  <!-- Background -->
+  <rect width="600" height="400" fill="#f8f9fa"/>
+  
+  <!-- Main NLP Circle -->
+  <circle cx="300" cy="200" r="180" fill="#e3f2fd" stroke="#4dabf5" stroke-width="3"/>
+  <text x="300" y="50" font-family="Arial" font-size="24" font-weight="bold" fill="#1565c0" text-anchor="middle">Natural Language Processing (NLP)</text>
+  
+  <!-- NLU Circle -->
+  <circle cx="200" cy="220" r="80" fill="#c8e6c9" stroke="#66bb6a" stroke-width="2"/>
+  <text x="200" y="220" font-family="Arial" font-size="18" font-weight="bold" fill="#2e7d32" text-anchor="middle">NLU</text>
+  <text x="200" y="240" font-family="Arial" font-size="12" fill="#2e7d32" text-anchor="middle">Understanding</text>
+  <text x="200" y="255" font-family="Arial" font-size="10" fill="#2e7d32" text-anchor="middle">(Meaning, Intent)</text>
+
+  <!-- NLG Circle -->
+  <circle cx="400" cy="220" r="80" fill="#ffe0b2" stroke="#ffa726" stroke-width="2"/>
+  <text x="400" y="220" font-family="Arial" font-size="18" font-weight="bold" fill="#ef6c00" text-anchor="middle">NLG</text>
+  <text x="400" y="240" font-family="Arial" font-size="12" fill="#ef6c00" text-anchor="middle">Generation</text>
+  <text x="400" y="255" font-family="Arial" font-size="10" fill="#ef6c00" text-anchor="middle">(Text Creation)</text>
+
+  <!-- Intersection or Connection lines -->
+  <path d="M 280 220 L 320 220" stroke="#90a4ae" stroke-width="2" stroke-dasharray="5,5"/>
+  
+  <text x="300" y="350" font-family="Arial" font-size="14" fill="#546e7a" text-anchor="middle">Intersection: Chatbots, Translation</text>
+</svg>

@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="0" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333" />
+    </marker>
+  </defs>
+
+  <!-- Main Cell Box -->
+  <rect x="100" y="100" width="600" height="300" rx="20" ry="20" fill="#f0f4c3" stroke="#33691e" stroke-width="3"/>
+  
+  <!-- Inputs -->
+  <text x="180" y="450" font-family="Arial" font-size="14" text-anchor="middle">x<tspan dy="4" font-size="10">t</tspan></text>
+  <line x1="180" y1="430" x2="180" y2="350" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <text x="50" y="350" font-family="Arial" font-size="14" text-anchor="middle">h<tspan dy="4" font-size="10">t-1</tspan></text>
+  <line x1="80" y1="350" x2="140" y2="350" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Cell State Line (Top) -->
+  <line x1="50" y1="150" x2="750" y2="150" stroke="#333" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="50" y="140" font-family="Arial" font-size="14" text-anchor="middle">C<tspan dy="4" font-size="10">t-1</tspan></text>
+  <text x="750" y="140" font-family="Arial" font-size="14" text-anchor="middle">C<tspan dy="4" font-size="10">t</tspan></text>
+
+  <!-- Forget Gate -->
+  <rect x="200" y="250" width="60" height="40" fill="#ffcc80" stroke="#ef6c00" stroke-width="2"/>
+  <text x="230" y="275" font-family="Arial" font-size="12" text-anchor="middle">σ</text>
+  <text x="230" y="310" font-family="Arial" font-size="10" text-anchor="middle" fill="#ef6c00">Forget</text>
+  
+  <!-- Connection to Forget -->
+  <line x1="180" y1="350" x2="230" y2="350" stroke="#333" stroke-width="2"/>
+  <line x1="230" y1="350" x2="230" y2="290" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <circle cx="230" cy="150" r="10" fill="none" stroke="#333" stroke-width="2"/>
+  <text x="230" y="155" font-family="Arial" font-size="14" text-anchor="middle">×</text>
+  <line x1="230" y1="250" x2="230" y2="165" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+
+
+  <!-- Input Gate -->
+  <rect x="320" y="250" width="60" height="40" fill="#ffcc80" stroke="#ef6c00" stroke-width="2"/>
+  <text x="350" y="275" font-family="Arial" font-size="12" text-anchor="middle">σ</text>
+  <text x="350" y="310" font-family="Arial" font-size="10" text-anchor="middle" fill="#ef6c00">Input</text>
+
+  <rect x="420" y="250" width="60" height="40" fill="#ffcc80" stroke="#ef6c00" stroke-width="2"/>
+  <text x="450" y="275" font-family="Arial" font-size="12" text-anchor="middle">tanh</text>
+  <text x="450" y="310" font-family="Arial" font-size="10" text-anchor="middle" fill="#ef6c00">Cand.</text>
+
+  <!-- Connection to Input -->
+  <line x1="230" y1="350" x2="350" y2="350" stroke="#333" stroke-width="2"/>
+  <line x1="350" y1="350" x2="350" y2="290" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <line x1="350" y1="350" x2="450" y2="350" stroke="#333" stroke-width="2"/>
+  <line x1="450" y1="350" x2="450" y2="290" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Input Math -->
+  <circle cx="400" cy="200" r="10" fill="none" stroke="#333" stroke-width="2"/>
+  <text x="400" y="205" font-family="Arial" font-size="14" text-anchor="middle">×</text>
+  <line x1="350" y1="250" x2="350" y2="200" stroke="#333" stroke-width="2"/>
+  <line x1="350" y1="200" x2="390" y2="200" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <line x1="450" y1="250" x2="450" y2="200" stroke="#333" stroke-width="2"/>
+  <line x1="450" y1="200" x2="410" y2="200" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Update Cell State -->
+  <circle cx="400" cy="150" r="10" fill="none" stroke="#333" stroke-width="2"/>
+  <text x="400" y="155" font-family="Arial" font-size="14" text-anchor="middle">+</text>
+  <line x1="400" y1="190" x2="400" y2="165" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+
+
+  <!-- Output Gate -->
+  <rect x="550" y="250" width="60" height="40" fill="#ffcc80" stroke="#ef6c00" stroke-width="2"/>
+  <text x="580" y="275" font-family="Arial" font-size="12" text-anchor="middle">σ</text>
+  <text x="580" y="310" font-family="Arial" font-size="10" text-anchor="middle" fill="#ef6c00">Output</text>
+
+  <!-- Connection to Output -->
+  <line x1="450" y1="350" x2="580" y2="350" stroke="#333" stroke-width="2"/>
+  <line x1="580" y1="350" x2="580" y2="290" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Output Math -->
+  <rect x="620" y="180" width="60" height="40" fill="#ffcc80" stroke="#ef6c00" stroke-width="2"/>
+  <text x="650" y="205" font-family="Arial" font-size="12" text-anchor="middle">tanh</text>
+  
+  <line x1="500" y1="150" x2="650" y2="150" stroke="#333" stroke-width="2"/>
+  <line x1="650" y1="150" x2="650" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <circle cx="650" cy="270" r="10" fill="none" stroke="#333" stroke-width="2"/>
+  <text x="650" y="275" font-family="Arial" font-size="14" text-anchor="middle">×</text>
+
+  <line x1="580" y1="250" x2="580" y2="270" stroke="#333" stroke-width="2"/>
+  <line x1="580" y1="270" x2="640" y2="270" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <line x1="650" y1="220" x2="650" y2="260" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Final Output h_t -->
+  <line x1="660" y1="270" x2="750" y2="270" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="760" y="275" font-family="Arial" font-size="14" text-anchor="middle">h<tspan dy="4" font-size="10">t</tspan></text>
+
+</svg>

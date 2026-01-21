@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300">
+  <defs>
+    <style>
+      .label { font-family: Arial, sans-serif; font-size: 14px; font-weight: bold; }
+      .token { font-family: Courier New, monospace; font-size: 12px; }
+      .window { fill: none; stroke-width: 2; }
+    </style>
+  </defs>
+
+  <!-- Title -->
+  <text x="300" y="30" class="label" text-anchor="middle" font-size="18">N-gram Sliding Windows</text>
+
+  <!-- Sentence -->
+  <text x="50" y="60" class="label">Sentence: "The quick brown fox"</text>
+
+  <!-- Unigrams -->
+  <text x="50" y="100" class="label" fill="#1565c0">Unigrams (N=1)</text>
+  <rect x="50" y="110" width="40" height="30" fill="#e3f2fd" stroke="#1565c0"/>
+  <text x="70" y="130" class="token" text-anchor="middle">The</text>
+  
+  <rect x="100" y="110" width="50" height="30" fill="#e3f2fd" stroke="#1565c0"/>
+  <text x="125" y="130" class="token" text-anchor="middle">quick</text>
+
+  <rect x="160" y="110" width="50" height="30" fill="#e3f2fd" stroke="#1565c0"/>
+  <text x="185" y="130" class="token" text-anchor="middle">brown</text>
+
+  <rect x="220" y="110" width="40" height="30" fill="#e3f2fd" stroke="#1565c0"/>
+  <text x="240" y="130" class="token" text-anchor="middle">fox</text>
+
+
+  <!-- Bigrams -->
+  <text x="50" y="170" class="label" fill="#2e7d32">Bigrams (N=2)</text>
+  
+  <!-- Window 1 -->
+  <rect x="50" y="180" width="100" height="30" fill="#c8e6c9" stroke="#2e7d32"/>
+  <text x="100" y="200" class="token" text-anchor="middle">The quick</text>
+
+  <!-- Window 2 -->
+  <rect x="160" y="180" width="110" height="30" fill="#c8e6c9" stroke="#2e7d32"/>
+  <text x="215" y="200" class="token" text-anchor="middle">quick brown</text>
+
+  <!-- Window 3 -->
+  <rect x="280" y="180" width="100" height="30" fill="#c8e6c9" stroke="#2e7d32"/>
+  <text x="330" y="200" class="token" text-anchor="middle">brown fox</text>
+
+
+  <!-- Trigrams -->
+  <text x="50" y="240" class="label" fill="#ef6c00">Trigrams (N=3)</text>
+
+  <!-- Window 1 -->
+  <rect x="50" y="250" width="160" height="30" fill="#ffe0b2" stroke="#ef6c00"/>
+  <text x="130" y="270" class="token" text-anchor="middle">The quick brown</text>
+
+  <!-- Window 2 -->
+  <rect x="220" y="250" width="160" height="30" fill="#ffe0b2" stroke="#ef6c00"/>
+  <text x="300" y="270" class="token" text-anchor="middle">quick brown fox</text>
+
+</svg>
